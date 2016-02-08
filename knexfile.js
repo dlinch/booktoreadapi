@@ -1,4 +1,5 @@
 // Update with your config settings.
+require('dotenv').load()
 
 module.exports = {
 
@@ -18,10 +19,10 @@ module.exports = {
       database: process.env.PG_DATABASE,
       ssl: true
     },
-    // pool: {
-    //   min: 2,
-    //   max: 10
-    // },
+    pool: {
+      min: 2,
+      max: 10
+    },
     },
     migrations: {
       tableName: 'knex_migrations'

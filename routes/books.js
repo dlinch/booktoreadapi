@@ -1,6 +1,8 @@
 var express = require('express')
 var router = express.Router();
 var knex = require('../db/knex')
+require('dotenv').load()
+
 var config = {
   client: 'pg',
   connection: process.env.DATABASE_URL || 'postgres://localhost/bookapi',
