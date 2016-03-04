@@ -5,9 +5,9 @@ Book To Read is an api that returns award winning science fiction books.
 
 ## How Do I Use It?
 
-Hit the api with GET requests at the endpoints listed below.
+Hit this url with GET requests at the endpoints listed below.
 ```
-https://booktoread.herokuapp.com/api/
+https://booktoread.herokuapp.com/
 ```
 
 ## The Endpoints
