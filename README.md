@@ -81,12 +81,12 @@ The 1991 Prometheus Award for Fallen Angels has 3 authors, which broke my Data M
 
 The Nebula award got off track somehow and gave a few awards out for books two year after they were published, and some of those books also received Hugo awards the year before. The current format is the year of the Hugo, and Nebula counted as the award winner. The following books won their Nebula in a year different than in the data:
 ```js
-Paladin of Souls: Hugo - 2004
-                : Nebula - 2005
+'Paladin of Souls': 'Hugo' - 2004
+                : 'Nebula' - 2005
 
-American Gods: Hugo - 2002
-               Nebula - 2003
+'American Gods': 'Hugo' - 2002
+               'Nebula' - 2003
 
-Forever Peace: Hugo - 1998
-               Nebula - 1999
+'Forever Peace': 'Hugo' - 1998
+               'Nebula' - 1999
 ```
