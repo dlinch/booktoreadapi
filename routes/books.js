@@ -6,7 +6,7 @@ require('dotenv').load()
 var config = {
   client: 'pg',
   connection: process.env.DATABASE_URL || 'postgres://localhost/bookapi',
-  ssl: true
+  ssl: true,
 }
 
 var Book = function(){
@@ -43,8 +43,15 @@ router.get('/randommultiple', function(req, res){
 
 router.get('/:award', function(req, res){
   var award = []
-  award.push(req.params.award);
-  knex.raw("select * from book where winner @> '{"+req.params.award+"}'").then(function(books){
+  var upperCaseLetter = req.params.award.toString();
+    console.log(req.params.award)
+    upperCaseLetter = upperCaseLetter.split("");
+    console.log(upperCaseLetter)
+    upperCaseLetter[0]=upperCaseLetter[0].toUpperCase();
+    upperCaseLetter = upperCaseLetter.join('')
+    console.log(upperCaseLetter)
+  award.push(upperCaseLetter);
+  knex.raw("select * from book where winner @> '{"+upperCaseLetter+"}'").then(function(books){
     res.json(books)
   })
 })
