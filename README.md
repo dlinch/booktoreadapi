@@ -19,25 +19,25 @@ This will return all books in the database.
 
 This will return a random book from the database.
 ```js
-/random
+api/random
 ```
 
 This will return a random book that won 2+ awards in one year.
 ```js
-/randommultiple
+api/randommultiple
 ```
 
 This will return all books that won a specific award, where 'parameter' is the award name being queried.
 This can be either 'prometheus', 'locus', 'hugo', or 'nebula'. The endpoint is not case sensitive
 for the first letter, but the rest are.
 ```js
-/award/parameter
+api/award/parameter
 ```
 
 This will return all books that won an award in a given year, where 'paramter' is the specified
 year. The earliest available year is currently 2006. The latest available year is 2015.
 ```js
-/year/parameter
+api/year/parameter
 ```
 
 

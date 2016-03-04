@@ -3,3 +3,21 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  
+  h2 Endpoints
+  h3 /api
+  p Returns all books
+  
+  h3 api/random
+  p Returns a random books
+  
+  h3 api/randommultiple
+  p Returns a random book that has won 2+ awards
+  
+  h3 api/award/parameter
+  p Returns books that have won at least the queried award. 
+  p Parameter can be prometheus, hugo, locus, nebula
+  
+  h3 api/year/parameter
+  p Returns books that won an award in the queried year.
+  p Parameter is any year 2006-2015, inclusive.
