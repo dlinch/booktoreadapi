@@ -35,7 +35,7 @@ api/award/parameter
 ```
 
 This will return all books that won an award in a given year, where 'paramter' is the specified
-year. The earliest available year is currently 2006. The latest available year is 2015.
+year. The earliest available year is currently 1979. The latest available year is 2015.
 ```js
 api/year/parameter
 ```
@@ -63,3 +63,26 @@ Where book.year is the year the book won the awards. Usually this denotes the bo
 
 ## Contributions
 BookToRead api is open source. Contribute today at [https://github.com/dlinch/booktoreadapi](https://github.com/dlinch/booktoreadapi)!
+
+## Data Irregularities
+Middle initials are grouped with first name.
+A first name initial with a middle name are grouped into the first name.
+Two initials are grouped into first name.
+```js
+'Joan D.'
+'L. Neil'
+'J.K.'
+```
+There were no Prometheus awards for 1980, 1981, and 1985.
+The first Prometheus award was given in 1979.
+The first Locus award was given in 1980. Therefore there is no award for 1979.
+The 1991 Prometheus Award for Fallen Angels has 3 authors, which broke my Data Model. The author is currently coded as Larry Niven, but the other authors are: Jerry Pournelle and Michael F. Flynn.
+The Nebula award got off track somehow and gave a few awards out for books two year after they were published, and some of those books also received Hugo awards the year before. The current format is the year of the Hugo, and Nebula counted as the award winner. The following books won their Nebula in a year different than in the data:
+Paladin of Souls: Hugo - 2004
+                : Nebula - 2005
+
+American Gods: Hugo - 2002
+               Nebula - 2003
+
+Forever Peace: Hugo - 1998
+               Nebula - 1999
