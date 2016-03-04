@@ -41,12 +41,19 @@ router.get('/randommultiple', function(req, res){
   })
 })
 
-router.get('/:award', function(req, res){
+router.get('/award/:award', function(req, res){
   var upperCaseLetter = req.params.award.toString();
     upperCaseLetter = upperCaseLetter.split("");
     upperCaseLetter[0]=upperCaseLetter[0].toUpperCase();
     upperCaseLetter = upperCaseLetter.join('')
   knex.raw("select * from book where winner @> '{"+upperCaseLetter+"}'").then(function(books){
+    res.json(books)
+  })
+})
+
+router.get('/year/:year', function(req, res){
+  console.log(req.params.year)
+  Book().where({year: req.params.year}).select().then(function(books){
     res.json(books)
   })
 })
