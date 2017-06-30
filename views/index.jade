@@ -7,13 +7,16 @@ block content
   a(target="_blank" href="https://github.com/dlinch/booktoreadapi") Github Repo
   
   h2 Endpoints
-  h3 /api
+  h3 /api/all
   p Returns all books
   
   h3 api/random
-  p Returns a random books
+  p Returns a random book
   
-  h3 api/randommultiple
+  h3 api/multiple
+  p Returns all books that have won 2+ awards
+  
+  h3 api/multiple/random
   p Returns a random book that has won 2+ awards
   
   h3 api/award/parameter
@@ -23,3 +26,6 @@ block content
   h3 api/year/parameter
   p Returns books that won an award in the queried year.
   p Parameter is any year 2006-2015, inclusive.
+  
+  h3 api/author?name=AUTHOR_NAME
+  p Returns books that have an author first or last name fuzzy matching the query

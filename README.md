@@ -14,7 +14,7 @@ https://booktoread.herokuapp.com/
 
 This will return all books in the database.
 ```js
-/api
+api/books
 ```
 
 This will return a random book from the database.
@@ -22,9 +22,14 @@ This will return a random book from the database.
 api/random
 ```
 
+This will return all books that won 2+ awards in one year.
+```js
+api/multiple
+```
+
 This will return a random book that won 2+ awards in one year.
 ```js
-api/randommultiple
+api/multiple/random
 ```
 
 This will return all books that won a specific award, where 'parameter' is the award name being queried.
@@ -38,6 +43,11 @@ This will return all books that won an award in a given year, where 'paramter' i
 year. The earliest available year is currently 1979. The latest available year is 2015.
 ```js
 api/year/parameter
+```
+
+This will return all books with an author first or last name that matches the query.
+```js
+api/author?name=AUTHOR_NAME
 ```
 
 
