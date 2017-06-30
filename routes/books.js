@@ -16,13 +16,11 @@ var Book = function(){
 router.get('/', function(req, res){
   Book().select().then(function(books){
     res.json(books)
-
   })
 })
 
 router.get('/random', function(req, res){
   Book().select().then(function(books){
-
     res.json(books[Math.floor(Math.random()*books.length)])
   })
 })
