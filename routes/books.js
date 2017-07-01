@@ -5,12 +5,6 @@ var titleize = require('titleize');
 
 require('dotenv').load();
 
-var config = {
-  client: 'pg',
-  connection: process.env.DATABASE_URL || 'postgres://localhost/bookapi',
-  ssl: true,
-}
-
 var Book = function(){
   return knex('book')
 }
