@@ -63,7 +63,6 @@ router.get('/award/:award', function(req, res){
 })
 
 router.get('/year/:year', function(req, res){
-  console.log(req.params.year)
   Book().where({year: req.params.year}).select()
   .then(function(books){
     res.json(books)
