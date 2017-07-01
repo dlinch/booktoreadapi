@@ -1,9 +1,9 @@
-var express = require('express')
+var express = require('express');
 var router = express.Router();
-var knex = require('../db/knex')
+var knex = require('../db/knex');
 var titleize = require('titleize');
 
-require('dotenv').load()
+require('dotenv').load();
 
 var config = {
   client: 'pg',
